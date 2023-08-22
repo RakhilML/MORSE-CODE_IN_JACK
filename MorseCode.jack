@@ -1,0 +1,68 @@
+class MorseCode {
+    field String eng;
+    field Array morse;
+
+    constructor MorseCode new() {
+        // store the all the alphabet in an array
+        let eng = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+
+        // Morse code by indexing
+        let morse = Array.new(eng.length());
+        let morse[0] = ".-"; // A
+        let morse[1] = "-..."; // B
+        let morse[2] = "-.-."; // C
+        let morse[3] = "-.."; // D
+        let morse[4] = "."; // E
+        let morse[5] = "..-."; // F
+        let morse[6] = "--."; // G
+        let morse[7] = "...."; // H
+        let morse[8] = ".."; // I
+        let morse[9] = ".---"; // J
+        let morse[10] = "-.-"; // K
+        let morse[11] = ".-.."; // L
+        let morse[12] = "--"; // M
+        let morse[13] = "-."; // N
+        let morse[14] = "---"; // O
+        let morse[15] = ".--."; // P
+        let morse[16] = "--.-"; // Q
+        let morse[17] = ".-."; // R
+        let morse[18] = "..."; // S
+        let morse[19] = "-"; // T
+        let morse[20] = "..-"; // U
+        let morse[21] = "...-"; // V
+        let morse[22] = ".--"; // W
+        let morse[23] = "-..-"; // X
+        let morse[24] = "-.--"; // Y
+        let morse[25] = "--.."; // Z
+        let morse[26] = ".----"; // 1
+        let morse[27] = "..---"; // 2
+        let morse[28] = "...--"; // 3
+        let morse[29] = "....-"; // 4
+        let morse[30] = "....."; // 5
+        let morse[31] = "-...."; // 6
+        let morse[32] = "--..."; // 7
+        let morse[33] = "---.."; // 8
+        let morse[34] = "----."; // 9
+        let morse[35] = "-----"; // 0
+
+        return this;
+    }
+
+    method void toMorse(String str) {
+        var int i, j;
+
+        let i = 0;
+        while (i < str.length()) {
+            let j = 0;
+            while (j < eng.length()) {
+                if (str.charAt(i) = eng.charAt(j)) {
+                    do Output.printString(morse[j]);
+                }
+                let j = j + 1;
+            }
+            do Output.printString(" ");
+            let i = i + 1;
+        }
+        return;
+    }
+}

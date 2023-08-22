@@ -1,0 +1,14 @@
+class Main {
+  function void main() {
+    var MorseCode codes;
+    var String str;
+
+    let str = Keyboard.readLine("String: ");
+    do Output.println();
+    do Output.printString("Morse code: ");
+      let codes = MorseCode.new();
+      do codes.toMorse(str);
+    
+    return;
+ }
+}
